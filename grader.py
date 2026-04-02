@@ -1,3 +1,5 @@
+"""Grader for the JSON Schema Validator task."""
+
 import json
 import re
 import math
