@@ -26,6 +26,10 @@ def make_error(path: str, message: str, constraint: str, expected: str, actual: 
 
 
 def python_type_name(value: Any) -> str:
+    """Map a Python value to its JSON schema type name.
+    
+    Returns a JSON schema-compatible type string for the given value.
+    Falls back to the value's Python class name for unrecognized types."""
     if value is None:
         return "null"
     if isinstance(value, bool):
